@@ -12,7 +12,9 @@
 <script lang="ts">
 import { Vue, Component, Emit, Prop } from 'vue-property-decorator';
 
-@Component
+@Component({
+  name: 'MyButton'
+})
 export default class MyButton extends Vue {
   @Prop() autofocus!: boolean;
   @Prop() disabled!: boolean;

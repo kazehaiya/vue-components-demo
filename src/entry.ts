@@ -7,7 +7,7 @@ const components = [ Button ];
 // 全量注册方法
 const install: PluginFunction<Vue> = function (vue, opts): void {
   components.forEach(component => {
-    vue.component(component.name, component);
+    vue.component(component.options.name, component);
   });
 };
 
