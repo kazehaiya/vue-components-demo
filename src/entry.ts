@@ -1,12 +1,13 @@
 import MyButton from '../packages/button';
+import { Vue } from 'vue-property-decorator';
 
 // 所有组件（全量注册）
 const components = [ MyButton ];
 
 // 全量注册方法
-const install = function (Vue, opts = {}) {
+const install = function (vue: Vue, opts = {}) {
   components.forEach(component => {
-    Vue.component(component.name, component);
+    vue.component(component.name, component);
   });
 };
 
