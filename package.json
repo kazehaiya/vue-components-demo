@@ -15,7 +15,9 @@
     "removeHtml": "rm ./lib/*.html",
     "lint:js": "vue-cli-service lint",
     "lint:css": "npx stylelint src packages --fix",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "pre-commit": [
     "lint:js",
@@ -59,6 +61,7 @@
     "stylelint-config-standard": "^18.3.0",
     "typescript": "^3.4.3",
     "vue-template-compiler": "^2.6.10",
+    "vuepress": "^1.0.2",
     "webpack-cli": "^3.3.6"
   },
   "author": {
