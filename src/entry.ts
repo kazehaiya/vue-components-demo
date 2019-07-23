@@ -1,11 +1,11 @@
-import MyButton from '../packages/button';
-import { Vue } from 'vue-property-decorator';
+import Vue, { PluginObject } from 'vue';
+import Button from '../packages/button';
 
 // 所有组件（全量注册）
-const components = [ MyButton ];
+const components = [ Button ];
 
 // 全量注册方法
-const install = function (vue: Vue, opts = {}) {
+const install = function install(vue: typeof Vue, opts?: BasicObject): void {
   components.forEach(component => {
     vue.component(component.name, component);
   });
@@ -16,7 +16,9 @@ if (typeof window !== 'undefined' && (window as any).Vue) {
   install((window as any).Vue);
 }
 
-export default {
-  MyButton,
+const _default: PluginObject<Vue> = {
+  Button,
   install
 };
+
+export default _default;
