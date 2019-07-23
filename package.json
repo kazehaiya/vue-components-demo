@@ -1,7 +1,11 @@
 {
   "name": "vue-cli-project-demo",
   "version": "0.1.0",
-  "private": true,
+  "keywords": [
+    "vue",
+    "demo",
+    "packages"
+  ],
   "main": "lib/vue-cli-project-demo.umd.js",
   "scripts": {
     "dev": "vue-cli-service serve --open",
@@ -21,6 +25,7 @@
     "docs",
     "types"
   ],
+  "typings": "types/index.d.ts",
   "dependencies": {
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
@@ -51,5 +56,20 @@
     "stylelint-config-standard": "^18.3.0",
     "typescript": "^3.4.3",
     "vue-template-compiler": "^2.6.10"
-  }
+  },
+  "author": {
+    "name": "CaiYin",
+    "email": "c763416559@gmail.com"
+  },
+  "homepage": "https://github.com/kazehaiya/vue-cli-project-demo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kazehaiya/vue-cli-project-demo"
+  },
+  "engines": {
+    "node": ">= 8.0.0",
+    "npm": ">= 5.0.0"
+  },
+  "private": false,
+  "license": "MIT"
 }
