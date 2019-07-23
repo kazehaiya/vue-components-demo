@@ -10,21 +10,21 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Emit, Prop } from 'vue-property-decorator'
+import { Vue, Component, Emit, Prop } from 'vue-property-decorator';
 
 @Component
 export default class MyButton extends Vue {
-  @Prop() autofocus!: boolean
-  @Prop() disabled!: boolean
+  @Prop() autofocus!: boolean;
+  @Prop() disabled!: boolean;
   @Prop({
     default: 'button',
-    validator (val: string) {
-      const validList: string[] = ['button', 'submit', 'reset']
-      return validList.includes(val)
+    validator(val: string) {
+      const validList: string[] = ['button', 'submit', 'reset'];
+      return validList.includes(val);
     }
-  }) type!: string
+  }) type!: string;
 
   @Emit('click')
-  buttonClick (e: any) {}
+  buttonClick(e: any) {}
 }
 </script>

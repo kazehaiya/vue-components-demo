@@ -3,11 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
+    "dev": "vue-cli-service serve --open",
+    "build": "vue-cli-service build --target lib --dest lib ./src/entry.js && yarn removeHtml",
+    "removeHtml": "rm ./lib/*.html",
+    "lint:js": "vue-cli-service lint",
+    "lint:css": "npx stylelint src packages --fix",
     "test:unit": "vue-cli-service test:unit"
   },
+  "pre-commit": [
+    "lint:js",
+    "lint:css"
+  ],
+  "files": [
+    "dist",
+    "lib",
+    "docs",
+    "types"
+  ],
   "dependencies": {
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
@@ -33,6 +45,9 @@
     "eslint-plugin-vue": "^5.0.0",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
+    "pre-commit": "^1.2.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-standard": "^18.3.0",
     "typescript": "^3.4.3",
     "vue-template-compiler": "^2.6.10"
   }
