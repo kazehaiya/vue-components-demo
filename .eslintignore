@@ -1,0 +1,6 @@
+dist/*
+lib/*
+package.json
+vue.config.js
+**/*.md
+src/types/*
