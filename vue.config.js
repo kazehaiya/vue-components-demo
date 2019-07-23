@@ -15,6 +15,7 @@ module.exports = {
     config.resolve.alias
       .set('@', resolve('src'))
       .set('@lib', resolve('lib'))
+      .set('@dist', resolve('dist'))
       .set('@views', resolve('src/views'))
       .set('@packages', resolve('packages'))
       .set('@components', resolve('src/components'));

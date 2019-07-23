@@ -22,6 +22,9 @@
       "@lib/*": [
         "lib/*"
       ],
+      "@dist/*": [
+        "dist/*"
+      ],
       "@views/*": [
         "src/views/*"
       ],

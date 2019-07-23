@@ -7,3 +7,9 @@ declare module "@lib/*" {
   const _default: PluginFunction<Vue>;
   export default _default;
 }
+
+declare module "@dist/*" {
+  import Vue, { PluginFunction } from 'vue';
+  const _default: PluginFunction<Vue>;
+  export default _default;
+}
