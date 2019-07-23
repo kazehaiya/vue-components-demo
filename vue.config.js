@@ -16,6 +16,7 @@ module.exports = {
       .set('@', resolve('src'))
       .set('@lib', resolve('lib'))
       .set('@views', resolve('src/views'))
+      .set('@packages', resolve('packages'))
       .set('@components', resolve('src/components'));
     // 新增 js 的 exclude 内容
     config.module.rule('js').exclude.add([resolve('lib'), resolve('dist')]);

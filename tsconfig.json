@@ -19,14 +19,17 @@
       "@/*": [
         "src/*"
       ],
+      "@lib/*": [
+        "lib/*"
+      ],
       "@views/*": [
         "src/views/*"
       ],
+      "@packages/*": [
+        "packages/*"
+      ],
       "@components/*": [
         "src/components/*"
-      ],
-      "@lib/*": [
-        "lib/*"
       ]
     },
     "pretty": true,

@@ -1,13 +1,15 @@
 import { expect } from 'chai';
 import { shallowMount } from '@vue/test-utils';
-import HelloWorld from '@/components/HelloWorld.vue';
+import Button from '@packages/button/index';
 
-describe('HelloWorld.vue', () => {
+describe('Button Test', () => {
   it('renders props.msg when passed', () => {
-    const msg = 'new message';
-    const wrapper = shallowMount(HelloWorld, {
-      propsData: { msg }
+    const slotContent = 'default';
+    const wrapper = shallowMount(Button, {
+      slots: {
+        default: slotContent
+      }
     });
-    expect(wrapper.text()).to.include(msg);
+    expect(wrapper.text()).to.include(slotContent);
   });
 });

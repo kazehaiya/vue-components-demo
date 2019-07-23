@@ -1,6 +1,6 @@
 <template>
   <section>
-    <my-button @click="handleClick">测试</my-button>
+    <my-button @click="handleClick">{{ content }}</my-button>
   </section>
 </template>
 
@@ -9,6 +9,8 @@ import { Vue, Component } from 'vue-property-decorator';
 
 @Component
 export default class ButtonDemo extends Vue {
+  readonly content = '测试';
+
   handleClick(event: Event) {
     console.log(event);
   }
