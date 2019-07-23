@@ -14,6 +14,7 @@ module.exports = {
     // 新增部分别名
     config.resolve.alias
       .set('@', resolve('src'))
+      .set('@lib', resolve('lib'))
       .set('@views', resolve('src/views'))
       .set('@components', resolve('src/components'));
     // 新增 js 的 exclude 内容

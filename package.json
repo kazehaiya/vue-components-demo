@@ -2,9 +2,10 @@
   "name": "vue-cli-project-demo",
   "version": "0.1.0",
   "private": true,
+  "main": "lib/vue-cli-project-demo.umd.min.js",
   "scripts": {
     "dev": "vue-cli-service serve --open",
-    "build": "vue-cli-service build --target lib --dest lib ./src/entry.js && yarn removeHtml",
+    "build": "vue-cli-service build --target lib --dest lib ./src/entry.ts && yarn removeHtml",
     "removeHtml": "rm ./lib/*.html",
     "lint:js": "vue-cli-service lint",
     "lint:css": "npx stylelint src packages --fix",

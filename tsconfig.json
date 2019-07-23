@@ -25,6 +25,9 @@
       "@components/*": [
         "src/components/*"
       ],
+      "@lib/*": [
+        "lib/*"
+      ]
     },
     "pretty": true,
     "sourceMap": true,
