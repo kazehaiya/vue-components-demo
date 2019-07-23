@@ -5,7 +5,7 @@ import Button from '../packages/button';
 const components = [ Button ];
 
 // 全量注册方法
-const install = function install(vue: typeof Vue, opts?: BasicObject): void {
+const install = function (vue: typeof Vue, opts?: BasicObject): void {
   components.forEach(component => {
     vue.component(component.name, component);
   });
