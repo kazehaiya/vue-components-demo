@@ -21,5 +21,19 @@ module.exports = {
       .set('@components', resolve('src/components'));
     // 新增 js 的 exclude 内容
     config.module.rule('js').exclude.add([resolve('lib'), resolve('dist')]);
+    // 由于没有暴露 terser 名，无法 tap 修改，因此采用下面那种写法
+    // if (process.env.NODE_ENV === 'production') {
+    //   config.optimization
+    //     .minimizer('terser')
+    //     .tap(args => [
+    //       ...args,
+    //       { keep_fnames: true }
+    //     ])
+    // }
+  },
+  configureWebpack: config => {
+    if (process.env.NODE_ENV === 'production') {
+      config.optimization.minimizer[0].options.terserOptions.keep_fnames = true
+    }
   }
 };

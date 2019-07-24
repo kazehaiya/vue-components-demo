@@ -6,7 +6,7 @@
     "demo",
     "packages"
   ],
-  "main": "lib/vue-cli-project-demo.umd.js",
+  "main": "lib/vue-cli-project-demo.umd.min.js",
   "scripts": {
     "dev": "vue-cli-service serve --open",
     "build": "yarn build:lib && yarn build:components",
